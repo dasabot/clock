@@ -1,0 +1,158 @@
+body {
+    background: black;
+    height: 150px;
+
+}
+
+#clock {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 65%;
+    margin: 0 auto;
+}
+
+.digit {
+    height: 100%;
+    position: relative;
+}
+
+.digit::after {
+    content: " ";
+    width: 80px;
+    height: 50%;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+
+.digit::before {
+    content: " ";
+    width: 80px;
+    height: 50%;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: -45px;
+}
+
+.digit[data-value="1"]::after {
+    border: 15px black solid;
+    border-right: 15px white solid;
+    clip-path: polygon(18% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="1"]::before {
+    border: 15px black solid;
+    border-right: 15px white solid;
+    clip-path: polygon(18% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="2"]::after {
+    border: 15px white solid;
+    border-left: 15px black solid;
+    clip-path: polygon(12% 0, 83% 0, 100% 15%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0 19%);
+}
+
+.digit[data-value="2"]::before {
+    border: 15px white solid;
+    border-right: 15px black solid;
+    clip-path: polygon(0% 14%, 100% 0%, 100% 100%, 107% 73%, 87% 100%, 15% 100%, 0% 85%, 0% 0%);
+}
+
+.digit[data-value="3"]::after {
+    border: 15px white solid;
+    border-left: 15px black solid;
+    clip-path: polygon(12% 0, 83% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="3"]::before {
+    border: 15px white solid;
+    border-left: 15px black solid;
+    clip-path: polygon(14% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="4"]::after {
+    border: 15px white solid;
+    border-top: 15px black solid;
+    clip-path: polygon(14% 0%, 87% 0, 100% 14%, 100% 86%, 86% 100%, 14% 100%, 0% 86%, 0% 14%);
+}
+
+.digit[data-value="4"]::before {
+    border: 15px black solid;
+    border-right: 15px white solid;
+    border-top: 15px white solid;
+    clip-path: polygon(14% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="5"]::after {
+    border: 15px white solid;
+    border-right: 15px black solid;
+    clip-path: polygon(12% 0%, 87% 0%, 100% 13%, 100% 70%, 100% 100%, 30% 100%, 0 100%, 0 19%);
+}
+
+.digit[data-value="5"]::before {
+    border: 15px white solid;
+    border-left: 15px black solid;
+    clip-path: polygon(0% 0%, 100% 14%, 100% 100%, 111% 73%, 87% 100%, 14% 100%, 0% 85%, 0% 0%);
+}
+
+.digit[data-value="6"]::after {
+    border: 15px white solid;
+    border-right: 15px black solid;
+    clip-path: polygon(14% 0%, 87% 0, 100% 14%, 100% 86%, 86% 100%, 14% 100%, 0% 86%, 0% 14%);
+}
+
+.digit[data-value="6"]::before {
+    border: 15px white solid;
+    clip-path: polygon(14% 0, 85% 0, 101% 14%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="7"]::after {
+    border: 15px black solid;
+    border-right: 15px white solid;
+    border-top: 15px white solid;
+    clip-path: polygon(13% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="7"]::before {
+    border: 15px black solid;
+    border-right: 15px white solid;
+    clip-path: polygon(18% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="8"]::after {
+    border: 15px white solid;
+    clip-path: polygon(14% 0%, 87% 0, 100% 14%, 100% 86%, 86% 100%, 14% 100%, 0% 86%, 0% 14%);
+}
+
+.digit[data-value="8"]::before {
+    border: 15px white solid;
+    clip-path: polygon(14% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="9"]::after {
+    border: 15px white solid;
+    clip-path: polygon(14% 0%, 87% 0, 100% 14%, 100% 86%, 86% 100%, 14% 100%, 0% 86%, 0% 14%);
+}
+
+.digit[data-value="9"]::before {
+    border: 15px white solid;
+    border-left: 15px black solid;
+    clip-path: polygon(14% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
+.digit[data-value="0"]::after {
+    border: 15px white solid;
+    border-bottom: 15px black solid;
+    clip-path: polygon(14% 0%, 87% 0, 100% 14%, 100% 86%, 86% 100%, 14% 100%, 0% 86%, 0% 14%);
+}
+
+.digit[data-value="0"]::before {
+    border: 15px white solid;
+    border-top: 15px black solid;
+    clip-path: polygon(14% 0, 85% 0, 100% 15%, 100% 86%, 86% 100%, 14% 100%, 0 85%, 0 16%);
+}
+
